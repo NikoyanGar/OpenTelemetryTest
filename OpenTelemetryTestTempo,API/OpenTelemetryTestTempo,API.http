@@ -1,0 +1,6 @@
+@OpenTelemetryTestTempo_API_HostAddress = http://localhost:5132
+
+GET {{OpenTelemetryTestTempo_API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
