@@ -1,0 +1,36 @@
+@OpenTelemetryTest_Api_HostAddress = http://localhost:5042
+
+### Get all products
+GET {{OpenTelemetryTest_Api_HostAddress}}/api/products
+Accept: application/json
+
+### Get product by id
+GET {{OpenTelemetryTest_Api_HostAddress}}/api/products/1
+Accept: application/json
+
+### Create a new product
+POST {{OpenTelemetryTest_Api_HostAddress}}/api/products
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "New Product",
+  "description": "A brand new product",
+  "price": 49.99
+}
+
+### Update an existing product
+PUT {{OpenTelemetryTest_Api_HostAddress}}/api/products/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": 1,
+  "name": "Updated Product",
+  "description": "Updated description",
+  "price": 59.99
+}
+
+### Delete a product
+DELETE {{OpenTelemetryTest_Api_HostAddress}}/api/products/1
+Accept: application/json

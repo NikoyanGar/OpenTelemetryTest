@@ -5,6 +5,10 @@ VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTelemetryTest.Api", "OpenTelemetryTest.Api\OpenTelemetryTest.Api.csproj", "{78DDC31C-C3A8-43EB-9F93-D97A46E1E64F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTelemetry.Grafana.Jaeger.AzureInsights", "OpenTelemetry.Grafana.Jaeger.AzureInsights\OpenTelemetry.Grafana.Jaeger.AzureInsights.csproj", "{44E4505C-FBEB-4897-B8C3-17C680C13F48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTelemetryOtlpExporter", "OpenTelemetryOtlpExporter\OpenTelemetryOtlpExporter.csproj", "{9EBAA3C0-E8F5-48F5-AE6C-981D28356A94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{78DDC31C-C3A8-43EB-9F93-D97A46E1E64F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78DDC31C-C3A8-43EB-9F93-D97A46E1E64F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78DDC31C-C3A8-43EB-9F93-D97A46E1E64F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44E4505C-FBEB-4897-B8C3-17C680C13F48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44E4505C-FBEB-4897-B8C3-17C680C13F48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44E4505C-FBEB-4897-B8C3-17C680C13F48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44E4505C-FBEB-4897-B8C3-17C680C13F48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EBAA3C0-E8F5-48F5-AE6C-981D28356A94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EBAA3C0-E8F5-48F5-AE6C-981D28356A94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EBAA3C0-E8F5-48F5-AE6C-981D28356A94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EBAA3C0-E8F5-48F5-AE6C-981D28356A94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
