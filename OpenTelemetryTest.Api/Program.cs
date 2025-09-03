@@ -11,6 +11,10 @@ builder.Services.AddDbContext<ProductsDataContext>(opts =>
     opts.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 
 // Add services to the container.
+builder.Services.AddOpenTelemetry();
+// Remove .StartWithHost() from the OpenTelemetry builder chain.
+// The correct usage is to just configure OpenTelemetry as shown below.
+
 builder.Services.AddOpenTelemetry()
     .WithTracing(builder => builder
         .AddAspNetCoreInstrumentation(opt =>
@@ -18,14 +22,11 @@ builder.Services.AddOpenTelemetry()
             opt.EnrichWithHttpRequest = (activity, httpRequest) => activity.SetBaggage("UserId", "1234");
         })
         .AddHttpClientInstrumentation()
-        .AddSqlClientInstrumentation()
         .AddConsoleExporter()
-        .AddJaegerExporter()
         .AddSource("Tracing.NET")
         .SetResourceBuilder(
             ResourceBuilder.CreateDefault()
-                .AddService(serviceName: "Tracing.NET")))
-    .StartWithHost();
+                .AddService(serviceName: "Tracing.NET")));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

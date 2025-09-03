@@ -1,4 +1,3 @@
-using OpenTelemetry.Exporter;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 using OpenTelemetryTestTempo_API;
